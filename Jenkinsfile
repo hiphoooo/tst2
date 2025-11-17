@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "uln-app"
-        DOCKER_REGISTRY = "lakshitha7/uln"
-    }
+    IMAGE_NAME = "uln-app"
+    DOCKER_REPO = "uln"
+}
+
 
     stages {
         stage('Checkout') {
@@ -39,11 +40,12 @@ pipeline {
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
-                    bat """
-                    echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin
-                    docker tag %IMAGE_NAME%:latest %DOCKER_REGISTRY%/%IMAGE_NAME%:latest
-                    docker push %DOCKER_REGISTRY%/%IMAGE_NAME%:latest
-                    """
+                   bat """
+                        echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin
+                        docker tag %IMAGE_NAME%:latest %DOCKER_USER%/%DOCKER_REPO%:latest
+                        docker push %DOCKER_USER%/%DOCKER_REPO%:latest
+                        """
+
                 }
             }
         }
