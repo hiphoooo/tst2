@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "my-app-image"
+        IMAGE_NAME = "uln"
         DOCKER_REGISTRY = "lakshitha7/uln"
     }
 
