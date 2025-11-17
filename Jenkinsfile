@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = "uln"
-        DOCKER_REGISTRY = "lakshitha7/lakshitha2"
+        DOCKER_REGISTRY = "lakshitha7/uln"
     }
 
     stages {
