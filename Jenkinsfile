@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "uln"
-        DOCKER_REGISTRY = "lakshitha7/uln"
+        IMAGE_NAME = "lakshitha2"
+        DOCKER_REGISTRY = "lakshitha7/lakshitha2"
     }
 
     stages {
