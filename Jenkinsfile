@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = "my-app-image"
-        DOCKER_REGISTRY = "lakshitha7"
+        DOCKER_REGISTRY = "lakshitha7/uln"
     }
 
     stages {
