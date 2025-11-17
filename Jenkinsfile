@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "lakshitha2"
+        IMAGE_NAME = "uln"
         DOCKER_REGISTRY = "lakshitha7/lakshitha2"
     }
 
