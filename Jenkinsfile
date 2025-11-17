@@ -42,7 +42,7 @@ pipeline {
                     bat """
                     echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin
                     docker tag %IMAGE_NAME%:latest %DOCKER_REGISTRY%/%IMAGE_NAME%:latest
-                    docker push %DOCKER_REGISTRY%:latest
+                    docker push %DOCKER_REGISTRY%/%IMAGE_NAME%:latest
                     """
                 }
             }
